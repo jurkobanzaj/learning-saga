@@ -7,14 +7,14 @@ const AddMessage = (props) => {
     return (
         <section id="new-message">
             <input
-                onKeyPress={(e) => {
+                onKeyPress={(e) => { // обробка кліку прямо в стейтлес компоненті
                     if(e.key ==='Enter') {
-                        props.dispatch(input.value, 'Me');
-                        input.value = '';
+                        props.dispatch(input.value, 'Me'); // передає диспатчи AddMessage в пропси
+                        input.value = ''; // обнулився текст у формі
                     };
                 }}
                 type='text'
-                ref={(node) => {
+                ref={(node) => { // не зовсім ясно, навіщо воно треба
                     input = node
                 }}
             />

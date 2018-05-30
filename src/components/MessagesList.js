@@ -2,7 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 import Message from './Message';
 
-const MessagesList = ({ messages }) => (
+const MessagesList = ({ messages }) => ( // отримує список повідомлень через пропси, мапить, віддає в компонент Месидж
     <section id='messages-list'>
         <ul>
             { messages.map(message => (

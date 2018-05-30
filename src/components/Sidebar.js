@@ -1,7 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-const Sidebar = ({ users }) => (
+const Sidebar = ({ users }) => ( // отримує список користувачів, мапить і виводить
     <aside 
         id="sidebar"
         className="sidebar"

@@ -1,9 +1,10 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
+// виводить отримане повідомлення
 const Message = ({ message, author }) => (
     <p>
-        <i>{ author }</i>: { message }
+        <i>{ author }</i>: { message } 
     </p>
 );
 

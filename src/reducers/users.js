@@ -9,7 +9,7 @@ const users = (state =[], action) => {
                     id: action.id
                 }
             ])
-        case types.USERS_LIST:
+        case types.USERS_LIST: // публікація списку користувачів - дуже проста
             return action.users
         default: return state;
     };

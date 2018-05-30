@@ -12,14 +12,14 @@ import reducers from './reducers/index';
 import handleNewMessage from './sagas';
 import username from './utils/name';
 
-const sagaMiddleware = createSagaMiddleware();
-const store = createStore(reducers, applyMiddleware(sagaMiddleware));
-const socket = setupSocket(store.dispatch, username);
+const sagaMiddleware = createSagaMiddleware(); // підключає сагу
+const store = createStore(reducers, applyMiddleware(sagaMiddleware)); // створює стор
+const socket = setupSocket(store.dispatch, username); // підключає сокет
 
-sagaMiddleware.run(handleNewMessage, { socket, username });
+sagaMiddleware.run(handleNewMessage, { socket, username }); // підключає сокет і користувача для обробки нових повідомлень
 
-ReactDOM.render(
-    <Provider store={store}>
+ReactDOM.render( // наступний рядок передає стор всім компонентам
+    <Provider store={store}> 
         <App />
     </Provider>, 
     document.getElementById('root'));

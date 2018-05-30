@@ -4,7 +4,7 @@ import { Sidebar } from './containers/Sidebar';
 import { MessagesList } from './containers/MessagesList';
 import { AddMessage } from './containers/AddMessage';
 
-class App extends React.Component {
+class App extends React.Component { // збирає компоненти докупи
 	render() {
 		return (
 			<div id="container">
