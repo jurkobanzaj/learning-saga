@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import createSagaMiddleware from 'redux-saga'
+import createSagaMiddleware from 'redux-saga';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import { addUser } from './actions/index';
+
 import setupSocket from './sockets/index';
 import reducers from './reducers/index';
 import handleNewMessage from './sagas';
